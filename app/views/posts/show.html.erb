@@ -10,9 +10,9 @@
 <%= form_for @comment do |f| %>
   <%= f.label :user_id %> <%= f.collection_select :user_id, User.all, :id, :username %> or
 
-  <%= f.fields_for :user, @comment.user.build do |u| %>
+  <!-- <%= f.fields_for :user, @comment.user.build do |u| %>
     <%= u.text_field :username %>
-  <% end %>
+  <% end %> -->
 
   <%= f.label :content %> <br>
   <%= f.text_area :content %>
